@@ -1,0 +1,11 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+HTML="$DIR/../Resources/quillgrid.html"
+
+if [ -d "/Applications/Google Chrome.app" ]; then
+  open -na "Google Chrome" --args --app="file://$HTML"
+elif [ -d "/Applications/Microsoft Edge.app" ]; then
+  open -na "Microsoft Edge" --args --app="file://$HTML"
+else
+  open "$HTML"
+fi
